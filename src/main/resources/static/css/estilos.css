@@ -45,3 +45,32 @@
     text-align: right;
     background-color: purple;    
 }
+.parrafoBlanco{ 
+    color: white;
+}
+.parrafoRojo{
+    color: red;
+}
+.parrafoCentrado{
+    text-align: center;
+}
+
+div.parrafoBlanco p{
+    font-size:25px;
+}
+body{
+    background-color: gray;
+}
+:visited{
+    font-size: 30px;
+}
+
+:hover{
+    background-color: green;
+    color:white;
+    transition: 1s;
+}
+:active{
+    background-color: purple;
+    color:white;
+}

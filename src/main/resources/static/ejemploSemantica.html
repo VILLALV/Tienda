@@ -9,12 +9,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .parrafoVioleta{
+                color: violet;
+            }
+        </style>
+        
     </head>
     <body>
         <header id="encabezado">Página de ejemplo de semantica HTML5</header>
         <nav id="menu">
-            <a href="index.html">Home</a> |
-            <a href="ejemplo8.html">Anterior</a>
+            <a style= "margin-right: 20px;" href="index.html">Home</a> |
+            <a style= "margin-right: 20px;" href="ejemplo8.html">Anterior</a>
         </nav>
         <aside id="barraLateral">
                 <h2>Información del página</h2>
@@ -23,13 +29,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <section id="contenido">
                 <h2>Contenido principal</h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                <p class="parrafoBlanco parrafoBlanco parrafoCentrado parrafoVioleta"
+                   style="color: gold;">Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                <p class="parrafoBlanco parrafoCentrado">Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                <p class="parrafoBlanco">Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                <div style="border: solid 2px; margin: 50px 30px 20px 10px;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                </div>
+                <div class="parrafoBlanco">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, natoque pharetra convallis luctus.</p>
             </section>
             <footer id="piePagina">Costa Rica 2025</footer>
