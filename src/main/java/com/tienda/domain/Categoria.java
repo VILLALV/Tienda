@@ -3,6 +3,7 @@ package com.tienda.domain;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import lombok.Data;
 
 @Data
@@ -21,6 +22,9 @@ public class Categoria implements Serializable {
     private String rutaImagen; //ruta_imagen
     private boolean activo;
     
+    @OneToMany
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    List<Producto> productos;
     public Categoria(){
     
     }
