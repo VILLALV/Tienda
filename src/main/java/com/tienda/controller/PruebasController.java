@@ -58,18 +58,18 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
-    
+
     @PostMapping("/query2")
     public String consultaQuery2(@RequestParam(value = "precioInf") double precioInf,
             @RequestParam(value = "precioSup") double precioSup, Model model) {
         var productos = productoService.metodoJPQL(precioInf, precioSup);
-        model.addAttribute("productos", productos);        
+        model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
         model.addAttribute("precioInf", precioInf);
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
-    
+
     @PostMapping("/query3")
     public String consultaQuery3(@RequestParam(value = "precioInf") double precioInf,
             @RequestParam(value = "precioSup") double precioSup, Model model) {
@@ -79,6 +79,30 @@ public class PruebasController {
         model.addAttribute("precioInf", precioInf);
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
+    }
+
+    @GetMapping("/practica04")
+    public String practica04(Model model) {
+        var productos = productoService.getProductos(false);
+        model.addAttribute("productos", productos);
+        return "/pruebas/practica04";
+    }
+
+    @PostMapping("/queryExistencias")
+    public String filtrarExistencias(
+            @RequestParam("existenciasInf") Integer existenciasInf,
+            @RequestParam("existenciasSup") Integer existenciasSup,
+            Model model) {
+
+        var productos = productoService.findByExistenciasBetween(existenciasInf, existenciasSup);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+
+        // Para mantener los valores del filtro en el formulario
+        model.addAttribute("existenciasInf", existenciasInf);
+        model.addAttribute("existenciasSup", existenciasSup);
+
+        return "/pruebas/practica04"; // la misma vista donde muestras el formulario y resultados
     }
 
 }
